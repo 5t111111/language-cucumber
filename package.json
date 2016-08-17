@@ -1,7 +1,7 @@
 {
   "name": "language-cucumber",
   "main": "./lib/language-cucumber",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Adds syntax highlighting for Cucumber files in Atom.",
   "keywords": [
     "cucumber",
