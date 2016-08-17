@@ -83,9 +83,7 @@
     'captures':
       '1':
         'name': 'support.class.gherkin.feature'
-      '2':
-        'name': 'string.language.gherkin.title'
-    'match': '^\\s*(Business Need|Feature|Ability|フィーチャ|機能):(.*)'
+    'match': '^\\s*(Business Need|Feature|Ability|フィーチャ|機能):.*'
   'given':
     'captures':
       '1':
@@ -95,16 +93,12 @@
     'captures':
       '1':
         'name': 'entity.name.type.class.gherkin.scenario'
-      '2':
-        'name': 'string.language.gherkin.scenario.title'
-    'match': '^\\s*(Scenario|シナリオ):(.*)\\b'
+    'match': '^\\s*(Scenario|シナリオ):.*'
   'scenario_outline':
     'captures':
       '1':
         'name': 'keyword.language.gherkin.scenario_outline'
-      '2':
-        'name': 'string.language.gherkin.scenario_outline.title'
-    'match': '^\\s*(Scenario Template|Scenario Outline|シナリオアウトライン|シナリオテンプレート|シナリオテンプレ|テンプレ):(.*)\\b'
+    'match': '^\\s*(Scenario Template|Scenario Outline|シナリオアウトライン|シナリオテンプレート|シナリオテンプレ|テンプレ):.*'
   'then':
     'captures':
       '1':
