@@ -1,0 +1,15 @@
+{basename} = require 'path'
+
+module.exports =
+  activate: (state) ->
+    atom.workspace.observeTextEditors (editor) =>
+      return unless @isStepsFile(editor.getPath())
+      editor.setGrammar(atom.grammars.grammarForScopeName('source.ruby.cucumber.steps'))
+
+  deactivate: ->
+
+  serialize: ->
+
+  isStepsFile: (filename) ->
+    stepsFiletype = '_steps.rb'
+    basename(filename).slice(-stepsFiletype.length) == stepsFiletype

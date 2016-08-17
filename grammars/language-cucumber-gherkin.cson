@@ -1,0 +1,167 @@
+'fileTypes': [
+  'feature'
+]
+'firstLineMatch': 'フィーチャ|Feature(.*)'
+'foldingStartMarker': '^\\s*\\b(例|テンプレ|シナリオテンプレート|シナリオテンプレ|シナリオアウトライン|シナリオ|サンプル)'
+'foldingStopMarker': '^\\s*$'
+'name': 'Gherkin'
+'patterns': [
+  {
+    'include': '#and'
+  }
+  {
+    'include': '#background'
+  }
+  {
+    'include': '#but'
+  }
+  {
+    'include': '#examples'
+  }
+  {
+    'include': '#feature'
+  }
+  {
+    'include': '#given'
+  }
+  {
+    'include': '#scenario'
+  }
+  {
+    'include': '#scenario_outline'
+  }
+  {
+    'include': '#then'
+  }
+  {
+    'include': '#when'
+  }
+  {
+    'include': '#strings_single_quote'
+  }
+  {
+    'include': '#strings_double_quote'
+  }
+  {
+    'include': '#strings_triple_quote'
+  }
+  {
+    'include': '#comments'
+  }
+  {
+    'include': '#tags'
+  }
+  {
+    'include': '#table'
+  }
+  {
+    'include': '#scenario_outline_variable'
+  }
+]
+'repository':
+  'and':
+    'captures':
+      '1':
+        'name': 'variable.other.gherkin.and'
+    'match': '^\\s*(And|かつ|\\* )'
+  'background':
+    'captures':
+      '1':
+        'name': 'keyword.language.gherkin.background'
+    'match': '^\\s*(Background|背景|\\* )'
+  'but':
+    'captures':
+      '1':
+        'name': 'variable.other.gherkin.but'
+    'match': '^\\s*(But|しかし|ただし|但し|\\* )'
+  'examples':
+    'captures':
+      '1':
+        'name': 'keyword.language.gherkin.examples'
+    'match': '^\\s*(Scenarios|Examples|サンプル|例|\\* )'
+  'feature':
+    'captures':
+      '1':
+        'name': 'support.class.gherkin.feature'
+      '2':
+        'name': 'string.language.gherkin.title'
+    'match': '^\\s*(Business Need|Feature|Ability|フィーチャ|機能):(.*)'
+  'given':
+    'captures':
+      '1':
+        'name': 'keyword.language.gherkin.given'
+    'match': '^\\s*(Given|前提|\\* )'
+  'scenario':
+    'captures':
+      '1':
+        'name': 'entity.name.type.class.gherkin.scenario'
+      '2':
+        'name': 'string.language.gherkin.scenario.title'
+    'match': '^\\s*(Scenario|シナリオ):(.*)\\b'
+  'scenario_outline':
+    'captures':
+      '1':
+        'name': 'keyword.language.gherkin.scenario_outline'
+      '2':
+        'name': 'string.language.gherkin.scenario_outline.title'
+    'match': '^\\s*(Scenario Template|Scenario Outline|シナリオアウトライン|シナリオテンプレート|シナリオテンプレ|テンプレ):(.*)\\b'
+  'then':
+    'captures':
+      '1':
+        'name': 'constant.language.gherkin.then'
+    'match': '^\\s*(Then|ならば|\\* )'
+  'when':
+    'captures':
+      '1':
+        'name': 'variable.other.gherkin.when'
+    'match': '^\\s*(When|もし|\\* )'
+  'strings_single_quote':
+    'begin': '(?<![a-zA-Z"])\''
+    'end': '\'(?![a-zA-Z])'
+    'name': 'string.quoted.single'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape'
+      }
+    ]
+  'strings_double_quote':
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.untitled'
+      }
+    ]
+  'strings_triple_quote':
+    'begin': '"""'
+    'end': '"""'
+    'name': 'string.quoted.single'
+  'comments':
+    'captures':
+      '0':
+        'name': 'comment.line.number-sign'
+    'match': '\\s*(#.*)'
+  'tags':
+    'captures':
+      '0':
+        'name': 'storage.type.tag.cucumber'
+    'match': '(@[^@\\r\\n\\t ]+)'
+
+  'table':
+    'begin': '^\\s*\\|'
+    'end': '\\|\\s*$'
+    'name': 'support.class.cucumber.table'
+    'patterns': [
+      {
+        'match': '\\.'
+        'name': 'source'
+      }
+    ]
+  'scenario_outline_variable':
+    'begin': '<'
+    'end': '>'
+    'name': 'variable.other'
+'scopeName': 'text.gherkin.feature'
