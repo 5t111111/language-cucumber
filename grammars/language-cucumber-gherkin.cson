@@ -2,7 +2,7 @@
   'feature'
 ]
 'firstLineMatch': 'フィーチャ|Feature(.*)'
-'foldingStartMarker': '^\\s*\\b(例|テンプレ|シナリオテンプレート|シナリオテンプレ|シナリオアウトライン|シナリオ|サンプル)'
+'foldingStartMarker': '^\\s*\\b(Scenarios|Examples|サンプル|例|Scenario|シナリオ|Scenario Template|Scenario Outline|シナリオアウトライン|シナリオテンプレート|シナリオテンプレ|テンプレ)'
 'foldingStopMarker': '^\\s*$'
 'name': 'Gherkin'
 'patterns': [
